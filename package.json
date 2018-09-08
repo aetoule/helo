@@ -22,6 +22,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "proxy": "http://localhost:4123"
+  },  
+  "proxy": {
+    "/auth/callback": {
+      "target": "http://localhost:4333"
+    },
+    "/api": {
+      "target": "http://localhost:4333"
+    }
+  }
 }

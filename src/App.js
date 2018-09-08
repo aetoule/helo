@@ -6,21 +6,23 @@ import Dashboard from './component/Dashboard/Dashboard';
 import Form from './component/Form/Form';
 import Post from './component/Post/Post'
 import route from './route';
+import { withRouter } from 'react-router-dom';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav />
+      {this.props.location.pathname !== '/' && <Nav /> }
         {/* <Auth />
         <Dashboard />
         <Form />
         <Post /> */}
-        <Post />
+        {/* <Post /> */}
         { route }
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
