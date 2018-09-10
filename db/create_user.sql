@@ -1,4 +1,4 @@
-insert into table users 
-(username, password, profile_pic)
+insert into users 
+(auth0id)
 values
-($1, $2, $3);
+($1);

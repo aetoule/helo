@@ -1,17 +1,12 @@
 const initialState = {
     user: {
-        username: 'aisha',
-        profile: 'img.url',
-        userId: 0
-    }
+    },
+    postsList: []
 }
-
-// const HANDLE_USERNAME = "HANDLE_USERNAME";
-// const HANDLE_PROFILE = "HANDLE_PROFILE";
 
 const LOGGED_IN = "LOGGED_IN";
 const LOGGED_OUT = "LOGGED_OUT";
-
+const SET_POSTS_LIST = "SET_POSTS_LIST";
 //action builders
 // update user information
 // clear user information
@@ -20,7 +15,9 @@ export default function reducer(state=initialState, action) {
         case LOGGED_IN:
             return {...state, user: action.payload}
         case LOGGED_OUT:
-            return {...state, user: null}   
+            return {...state, user: null} 
+        case SET_POSTS_LIST: 
+            return {...state, postsList: action.payload}  
         default: 
             return {...state}
     }
@@ -37,5 +34,12 @@ export function logIn(user) {
 export function logOut() {
     return {
         type: LOGGED_IN
+    }
+}
+
+export function setPostsList(postsList) {
+    return {
+        type: SET_POSTS_LIST,
+        payload: postsList
     }
 }

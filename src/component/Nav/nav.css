@@ -1,3 +1,17 @@
+.nav-content {
+    background: lightpink;
+    align-items: flex-start;
+    max-width: 100px;
+    height: 100vh;
+}
+.user-profile-pic {
+    height: 75px;
+    width: 75px; 
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+
 .power-button {
     height: 50px;
     width: 50px; 
