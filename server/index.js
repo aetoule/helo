@@ -86,7 +86,7 @@ app.post('/api/logging-in-user', controller.postLogin);
 app.get('/api/posts', controller.getPosts);
 app.post('/api/logout', (req, res) => {
     req.session.destroy();
-    res.send();
+    res.send('session destroyed');
 })
 
 // app.get('/api/memes', memesController.getDb);

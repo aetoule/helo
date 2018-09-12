@@ -37,7 +37,7 @@ render(){
             <p>{user.name}</p>
             <Link to='/dashboard'><button>Home</button></Link>
                 <Link to='/post/:postid'><button>New Post</button></Link>
-            <div> <img className='power-button' src={powerButton} onClick={this.testLogOut}/> <div>Log out </div> </div>
+            <div> <img className='power-button' src={powerButton} onClick={this.testLogOut}/> <div></div> </div>
 
         </div>
     );
